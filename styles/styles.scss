@@ -1,0 +1,193 @@
+@import 'global';
+@import 'utilities';
+@import 'variablesBrand1';
+
+body{
+  min-height:100vh;
+  font-family: 'Open Sans', sans-serif;
+  margin:0;
+  padding:0;
+}
+
+.container{
+  max-width:1200px;
+  width:80vw;
+}
+
+header{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+  padding-top:2rem;
+  height:rem(200px);
+  color:$clr-brand-secondary;
+  .logoDiv{
+    display:flex;
+    align-items:center;
+    .logoDiv__title{
+      font-size:1rem;
+      font-weight:700;
+    }
+    .logoDiv__img{
+      width:rem(50px);
+      height:rem(50px);
+      margin-right:0.5rem;
+      fill:$clr-brand-secondary !important;
+    }
+  }
+  .btn--secondary{
+    font-family: inherit;
+    outline:none;
+    background:none;
+    border:none;
+    margin-top:2rem;
+    margin-bottom:0.5rem;
+    transition:all 0.2s ease-in-out;
+    &:hover{
+      transform:scale(0.9);
+    }
+    a{
+      color:$clr-brand-secondary;
+      font-size:1rem;
+      font-weight:300;
+      padding-bottom:0.25rem;
+      line-height:1.5;
+    }
+  }
+}
+
+.hero{
+  background-color:$clr-brand-main;
+  background-image:url('https://d3544la1u8djza.cloudfront.net/Portal/Dog+Photos/dog-golden.png');
+  background-position:bottom right;
+  background-repeat:no-repeat;
+  background-size:rem(190px) rem(250px);
+  padding:2.5rem 1rem 1rem;
+  border-radius:1rem;
+  color:$clr-brand-secondary;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  .hero__info{
+    padding-inline:2rem;
+  }
+  p{
+    font-size:1rem;
+    font-weight:300;
+  }
+  h1{
+    font-size:1.5rem;
+    margin-top:1rem;
+    color:$clr-brand-secondary;
+  }
+  span{
+    font-size:1rem;
+    display:block;
+  }
+  .btn--primary{
+    width:100%;
+    outline:none;
+    border:none;
+    padding:0.75rem;
+    margin-top:10rem;
+    background:$clr-brand-secondary;
+    color:$clr-brand-2;
+    border-radius:0.5rem;
+    font-size:1.5rem;
+    font-weight:700;
+    transition:all 0.2s east-in-out;
+    &:hover{
+      background:$clr-brand-2;
+      color:$clr-brand-secondary;
+    }
+  }
+}
+
+@media(min-width:768px){
+  header{
+    .logoDiv{
+      .logoDiv__title{
+        font-size:1.5rem;
+        letter-spacing:0.125rem;
+      }
+      .logoDiv__img{
+        width:rem(76px);
+        height:rem(89px);
+      }
+    }
+    .btn--secondary{
+      margin-top:auto;
+      a{
+        font-size:2rem;
+      }
+    }
+  }
+
+  .hero{
+    background-size:rem(300px) rem(400px);
+    padding:10rem 1rem 1rem;
+    display:flex;
+    margin-top:1rem;
+    p{
+      font-size:2rem;
+    }
+    h1{
+      font-size:3rem;
+      margin-top:3rem;
+    }
+    span{
+      font-size:1.75rem;
+    }
+    .btn--primary{
+      padding:1.5rem;
+      font-size:2rem;
+    }
+  }
+
+
+}
+
+@media(min-width:1100px){
+  header{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: flex-start;
+    .logoDiv{
+      .logoDiv__title{
+        font-size:2.5rem;
+        letter-spacing:0.125rem;
+      }
+      .logoDiv__img{
+        width:rem(76px);
+        height:rem(89px);
+      }
+    }
+    .btn--secondary{
+      margin-top:auto;
+      a{
+        font-size:2rem;
+      }
+    }
+  }
+  
+  .hero{
+    background-size:unset;
+    display:flex;
+    p{
+      font-size:2rem;
+    }
+    h1{
+      font-size:3rem;
+      margin-top:3rem;
+    }
+    span{
+      font-size:2rem;
+    }
+    .btn--primary{
+      padding:1.5rem;
+      font-size:2rem;
+    }
+  }
+
+}
